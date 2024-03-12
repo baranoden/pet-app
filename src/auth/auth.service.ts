@@ -44,7 +44,7 @@ export class AuthService {
     const { id, username } = user;
     await this.redisClient.set(
       id,
-      username,
+      'login',
       'EX',
       process.env.TOKEN_EXPIRE_TIME,
     );
@@ -78,7 +78,7 @@ export class AuthService {
     const { username, id } = saveUser;
     await this.redisClient.set(
       id,
-      username,
+      'login',
       'EX',
       process.env.TOKEN_EXPIRE_TIME,
     );

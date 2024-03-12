@@ -29,3 +29,21 @@ export class PetNotFound extends HttpException {
     super('Pet not found', HttpStatus.NOT_FOUND);
   }
 }
+
+export class UserHaveNotPet extends HttpException {
+  constructor() {
+    super("User doesn't have a Pet", HttpStatus.NOT_FOUND);
+  }
+}
+
+export class UserAlreadyHasPet extends HttpException {
+  constructor() {
+    super('User already has a pet', HttpStatus.NOT_FOUND);
+  }
+}
+
+export class UserHasAlreadyPetted extends HttpException {
+  constructor() {
+    super('User already petted his creature', HttpStatus.NOT_FOUND);
+  }
+}
